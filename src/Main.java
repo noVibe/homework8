@@ -34,14 +34,14 @@ public class Main {
         }
         //=====Task 2-1, 2-2 and 2-3 combined=====
         System.out.println("=====Task 2-1, 2-2 and 2-3=====");
-        int contribution = 15000;
-        int savings = 0;
+        int savings = 15000;
+        double percent = 1.07;
         for (int i = 1; ; i++) {
-            savings += contribution * 1.07;
-            if (i % 6 == 0 && i <= 9 * 12) {
+            savings *= percent;
+            if (i % 6 == 0 && i <= 9 * 12) { //Вывод накоплений каждые полгода в течение 9 лет
                 System.out.println("Month: " + i + ". Savings: " + savings);
             }
-            if (savings >= 12000000) {
+            if (savings >= 12000000) { //Накопление 12 млн
                 System.out.println("---\nMonth: " + i + ". Savings: " + savings + ". 12 millions have been achieved!");
                 break;
             }
